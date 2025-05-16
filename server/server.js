@@ -6,7 +6,7 @@ const app = express()
 
 const indexRouter = require('./routes/index')
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 
 app.get('/test', (req, res) => {
