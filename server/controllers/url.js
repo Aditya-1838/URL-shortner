@@ -5,6 +5,7 @@ const generateUniqueId = require('../utils/generateUniqueId')
 async function createShortUrl(req, res) {
     const { url } = req.body
     // Use BASE_URL env variable, fallback to localhost for dev
+    //here i have remove something
     const clientUrl = process.env.BASE_URL 
     console.log('BASE_URL:', clientUrl)
 
