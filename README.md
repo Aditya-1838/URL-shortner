@@ -8,7 +8,7 @@ The generated short ID redirects users to the original URL.
 ## 📂 GitHub Repository
 
 **Repository**: [Aditya-1838/URL-shortner](https://github.com/Aditya-1838/URL-shortner)  
-**Live Link**: [Website](https://your-live-site-link.com) <!-- Replace with actual link -->
+**Live Link**: [Website](https://url-shortner-psi-coral.vercel.app) <!-- Replace with actual link -->
 
 ---
 
