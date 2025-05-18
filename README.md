@@ -1,28 +1,100 @@
-# URL-Shortner
+# 🔗 URL-Shortner
 
-Built a custom URL shortner used for creating short url and giving the url a  unique shortid.
-The unquie id redirects the user to the orignial url.
+A custom-built URL shortener used to create short URLs and assign each a unique short ID.  
+The generated short ID redirects users to the original URL.
 
-## TECHNOLOGIES USED
+---
 
+## 📂 GitHub Repository
 
- 
-### BACKEND TECH:
-<br>◦[Express](https://expressjs.com/)  Node.js framework used for buildin REST API</br>
-<br>◦[MongoDB](https://www.mongodb.com/) Document oriented NoSQL database</br>
-<br>◦[Mongoose](https://mongoosejs.com/) MongoDB database object modeling tool</br>
-<br>◦[ShortID](https://www.npmjs.com/package/shortid) Used for generating unqiue and random id for a given URL of some particular length</br>
-### FRONTEND TECH:
-<br>◦[HTML and CSS](https://en.wikipedia.org/wiki/CSS) Used for styling the page </br>
+**Repository**: [Aditya-1838/URL-shortner](https://github.com/Aditya-1838/URL-shortner)  
+**Live Link**: [Website](https://your-live-site-link.com) <!-- Replace with actual link -->
 
-## Architecture:
-THE WORK FLOW OF THE URL SHORTNER:
+---
+
+## 📌 Description
+
+Shortly is a custom-built URL shortener that enables users to generate shortened links from long URLs.  
+Each submitted URL is assigned a unique short ID that, when accessed, seamlessly redirects users to the original destination.
+
+The system ensures:
+
+- Unique short IDs for each URL using a random ID generator
+- Efficient redirection logic through RESTful API design
+- Real-time click tracking and history using MongoDB
+- Persistent storage and retrieval of URLs for analytics and reuse
+
+This tool is ideal for simplifying lengthy URLs, improving shareability, and gaining basic insight into link usage.
+
+---
+
+## 🛠️ Technologies Used
+
+### 🔙 Backend:
+
+- [Node.js](https://nodejs.org/) – Backend server to handle URL shortening and redirection
+- [Express.js](https://expressjs.com/) – RESTful API framework
+- [MongoDB](https://www.mongodb.com/) – Database for storing URLs and metadata
+- [Mongoose](https://mongoosejs.com/) – ODM for MongoDB schema modeling
+- [ShortID](https://www.npmjs.com/package/shortid) – Generates unique short identifiers
+- [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) – Enables cross-origin requests between frontend and backend
+
+### 🎨 Frontend:
+
+- [React.js](https://reactjs.org/) – Builds a responsive UI
+- [Axios](https://axios-http.com/) – Handles HTTP requests between frontend and backend APIs
+
+---
+
+## 🧱 Architecture
+
+The application follows a three-tier architecture comprising the **Frontend**, **Backend**, and **Database**:
 
 ![](Architecture.png)
 
+```
+[React Frontend] ⇄ [Node.js + Express Backend] ⇄ [Mongoose + MongoDB Database]
+```
 
+### 1. Frontend (React.js)
+- Built using React
+- Users can input long URLs to generate short ones
+- Displays the latest 10+ previously shortened URLs with click counts
+- Makes API calls to the backend using Axios
 
-### Future upgrades :
-Will try to make the Frontend more attractive and resposive using frontend tech.
-This is purely backend porject and will work on frontend in upcoming days.
+### 2. Backend (Node.js + Express.js)
+- Acts as the bridge between the frontend and the database
+- Handles routes for:
+  - Creating a short URL (POST `/shorten`)
+  - Redirecting using short ID (GET `/:shortId`)
+- Manages core logic and validation
+- Enables CORS for cross-origin requests
+
+### 3. Database Layer (MongoDB + Mongoose)
+- Stores:
+  - Original long URLs
+  - Generated short IDs
+  - Click counts
+  - Timestamps and metadata
+- Mongoose is used to define schemas and interact with MongoDB
+
+---
+
+## ☁️ Deployment
+
+- **Frontend**: Hosted on Vercel  
+- **Backend**: Deployed on Render  
+- **Database**: MongoDB Atlas for cloud-hosted, scalable storage
+
+---
+
+## 🚀 Practical Applications
+
+- Simplifies sharing of long and complex URLs on social media, emails, and messages
+- Tracks link clicks to monitor user engagement and campaign performance
+- Provides easy-to-remember URLs for branding and marketing
+- Enables fast redirection to original URLs
+- Manages multiple links with history tracking for reuse
+
+---
 
